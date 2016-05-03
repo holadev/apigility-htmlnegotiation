@@ -1,5 +1,5 @@
 {
-    "name": "zpetr/apigility-htmlnegotiation",
+    "name": "hola/apigility-htmlnegotiation",
     "type": "library",
     "description": "Apigility HtmlNegotiation module",
     "keywords" : [
@@ -10,7 +10,7 @@
 		"html",
 		"negotiation"
 	],
-    "homepage": "https://github.com/zpetr/apigility-htmlnegotiation",
+    "homepage": "https://github.com/holadev/apigility-htmlnegotiation",
     "license": "BSD",
     "authors": [
         {
@@ -28,7 +28,7 @@
     },
     "autoload": {
         "psr-4": {
-            "zPetr\\HtmlNegotiation\\": "src/"
+            "hola\\HtmlNegotiation\\": "src/"
         },
         "classmap": [
             "Module.php"

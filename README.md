@@ -18,7 +18,7 @@ Define dependencies in your composer.json file
 ```json
 {
     "require": {
-        "zpetr/apigility-htmlnegotiation" : "dev-master"
+        "hola/apigility-htmlnegotiation" : "dev-master"
     }
 }
 ```
@@ -32,12 +32,12 @@ or update it
     php composer.phar update
 
 ### Usage
-- Add *zPetr\\HtmlNegotiation* to application.config.php:
+- Add *hola\\HtmlNegotiation* to application.config.php:
 ```php
 	return array(
     	'modules' => array(
         	...,
-            'zPetr\\HtmlNegotiation',
+            'hola\\HtmlNegotiation',
             ....
 		)
 	)     
@@ -51,7 +51,7 @@ or update it
 #### Layout
 If you want to personalize custom layout template:
 
-1. Copy default *zpetr/apigility-htmlnegotiation/view/layout.phtml* template to the view folder of your module (why not to Application module)
+1. Copy default *hola/apigility-htmlnegotiation/view/layout.phtml* template to the view folder of your module (why not to Application module)
 2. Add this to module config:
 ```php
 	...

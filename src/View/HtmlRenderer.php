@@ -1,5 +1,5 @@
 <?php
-namespace zPetr\HtmlNegotiation\View;
+namespace hola\HtmlNegotiation\View;
 
 use Zend\View\HelperPluginManager;
 use Zend\View\Renderer\PhpRenderer;
@@ -56,8 +56,9 @@ class HtmlRenderer extends PhpRenderer
      * Set helper plugin manager instance.
      *
      * Also ensures that the 'Hal' helper is present.
-     *
-     * @param  HelperPluginManager $helpers
+     * 
+     * @param string|HelperPluginManager $helpers
+     * @return void
      */
     public function setHelperPluginManager($helpers)
     {

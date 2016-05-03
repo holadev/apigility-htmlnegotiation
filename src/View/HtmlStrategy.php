@@ -1,8 +1,10 @@
 <?php
-namespace zPetr\HtmlNegotiation\View;
+namespace hola\HtmlNegotiation\View;
 
+use Zend\Http\Response;
 use Zend\View\Strategy\PhpRendererStrategy;
 use Zend\View\ViewEvent;
+use ZF\Hal\View\HalJsonRenderer;
 
 /**
  * Extension of the HTML strategy to handle the HtmlModel and provide
@@ -17,9 +19,13 @@ class HtmlStrategy extends PhpRendererStrategy
 {
     protected $contentType = 'text/html';
 
+    /**
+     * HtmlStrategy constructor.
+     * @param HtmlRenderer $renderer
+     */
     public function __construct(HtmlRenderer $renderer)
     {
-    	$this->renderer = $renderer;
+        parent::__construct($renderer);
     }
 
     /**
@@ -34,7 +40,7 @@ class HtmlStrategy extends PhpRendererStrategy
 
         if (!$model instanceof HtmlModel) {
             // unrecognized model; do nothing
-            return;
+            return null;
         }
 
         // HtmlModel found
@@ -64,15 +70,16 @@ class HtmlStrategy extends PhpRendererStrategy
             return;
         }
 
-        $model       = $e->getModel();
+//        $model       = $e->getModel();
         $contentType = $this->contentType;
+        /** @var Response $response */
         $response    = $e->getResponse();
 
-        if ($model instanceof HtmlModel
-            && ($model->isCollection() || $model->isEntity())
-        ) {
-            $contentType = 'text/hal+html';
-        }
+//        if ($model instanceof HtmlModel
+//            && ($model->isCollection() || $model->isEntity())
+//        ) {
+//            $contentType = 'text/hal+html';
+//        }
 
         // Populate response
         $response->setContent($result);
