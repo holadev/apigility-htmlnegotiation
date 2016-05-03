@@ -201,7 +201,7 @@ class HtmlRenderer extends PhpRenderer
         $map = new Resolver\TemplateMapResolver($this->config['view_manager']['template_map']);
         
         $resolverLayout->attach($map);
-        $view->setTemplate("zpetr/htmlnegotiation/layout");
+        $view->setTemplate("hola/htmlnegotiation/layout");
         
         $view->setVariable('content',$content);
         

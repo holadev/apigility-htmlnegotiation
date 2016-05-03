@@ -17,6 +17,12 @@ Define dependencies in your composer.json file
 
 ```json
 {
+    "repositories": [
+        {
+            "url": "https://github.com/holadev/apigility-htmlnegotiation",
+            "type": "git"
+        }
+    ],
     "require": {
         "hola/apigility-htmlnegotiation" : "dev-master"
     }
@@ -57,7 +63,7 @@ If you want to personalize custom layout template:
 	...
 	'view_manager' => array(
 		'template_map' => array(
-			'zpetr/htmlnegotiation/layout'	=> __DIR__ . '/../view/layout.phtml',
+			'hola/htmlnegotiation/layout'	=> __DIR__ . '/../view/layout.phtml',
 		),
 		'template_path_stack' => array(
 			__DIR__ . '/../view',
@@ -70,4 +76,4 @@ If you want to personalize custom layout template:
 To customize any API template:
 
 1. Create *view* folder in your API directory. For example, if you have API named Foo with REST service named Bar, create:<pre>module/Foo/src/Foo/V1/Rest/Bar/view/</pre>
-2. Create *get.phtml* for Entity template and *get_list.phtml* for Collection template. You can use default ones from *zpetr/apigility-htmlnegotiation/view/zf/rest/* folder.
+2. Create *get.phtml* for Entity template and *get_list.phtml* for Collection template. You can use default ones from *hola/apigility-htmlnegotiation/view/zf/rest/* folder.
