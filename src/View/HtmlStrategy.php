@@ -70,7 +70,7 @@ class HtmlStrategy extends PhpRendererStrategy
             return;
         }
 
-        $model       = $e->getModel();
+//        $model       = $e->getModel();
         $contentType = $this->contentType;
         /** @var Response $response */
         $response    = $e->getResponse();
@@ -80,9 +80,6 @@ class HtmlStrategy extends PhpRendererStrategy
 //        ) {
 //            $contentType = 'text/hal+html';
 //        }
-        if ($model->isCollection()){
-            $contentType = 'application/json';
-        }
 
         // Populate response
         $response->setContent($result);
