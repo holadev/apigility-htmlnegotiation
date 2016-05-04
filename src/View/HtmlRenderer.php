@@ -7,6 +7,7 @@ use Zend\View\ViewEvent;
 use ZF\ApiProblem\ApiProblem;
 use ZF\ApiProblem\View\ApiProblemModel;
 use ZF\ApiProblem\View\ApiProblemRenderer;
+use ZF\Hal\Plugin\Hal as HalHelper;
 use Zend\View\Resolver;
 use Zend\View\Model\ViewModel;
 
